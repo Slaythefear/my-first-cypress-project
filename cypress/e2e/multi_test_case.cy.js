@@ -26,8 +26,8 @@ describe('Verify login with valid and invalid credentials', () => {
     cy.get('#password').type('secret_sauce01') // Using the 'id' selector
     cy.get('#login-button').click() // Using the 'id' selector for the login button
 
-    // Assert that the error message is displayed
-    cy.get('[data-test="error"]') // Using the 'data-test' attribute selector for the error message
+    // Assert that the error message is displayed is verified.
+    cy.get('[data-test="error"]')
       .should('be.visible')
       .and('contain', 'Epic sadface: Username and password do not match any user in this service')
   })
